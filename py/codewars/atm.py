@@ -8,16 +8,10 @@ Examples (Input --> Output)
 "a234"   -->  false"""
 
 def validate_pin(pin):
-    count=0
-    for numbers in str(pin):
-        if numbers==int:
-            count=count+1
-            if count==6 or 4:
-                return True
-            else:
-                return False
-        else:
-            break
-        
+    pin = str(pin)
+    if len(pin) == 4 or len(pin) == 6:
+        return pin.isdigit()
+    else:
+        return False
 
 print(validate_pin(1234))
