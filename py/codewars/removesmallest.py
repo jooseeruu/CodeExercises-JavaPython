@@ -12,3 +12,18 @@ Examples
 * Input: [1,2,3,4,5], output = [2,3,4,5]
 * Input: [5,3,2,1,4], output = [5,3,2,4]
 * Input: [2,2,1,2,1], output = [2,2,2,1]"""
+def smallest(array):
+
+    smallest_number = array[0]
+    smallest_index = 0
+    for i in range(1, len(array)):
+        if array[i] < smallest_number:
+            smallest_number = array[i]
+            smallest_index = i
+    
+    new_array = array[:smallest_index] + array[smallest_index + 1:]
+    return new_array
+        
+print(smallest([1, 2, 3, 4, 5]))  
+print(smallest([5, 3, 2, 1, 4]))  
+print(smallest([2, 2, 1, 2, 1]))  
