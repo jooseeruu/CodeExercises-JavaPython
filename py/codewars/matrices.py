@@ -6,7 +6,9 @@ files es canvien per columnes tal i com podeu veure:"""
 
 import random
 # Generar una matriz de 3x3 con valores aleatorios
-A = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+A =[[0, 0, 0], 
+    [0, 0, 0], 
+    [0, 0, 0]]
 for i in range(3):
     for j in range(3):
         A[i][j] = int(random.random() * 10)
