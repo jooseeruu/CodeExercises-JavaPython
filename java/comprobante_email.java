@@ -7,14 +7,18 @@ public class comprobante_email {
         String mail="";
         System.out.println("Introduce tu mail:");
         mail=entrada.nextLine();
-        boolean arroba= false;
+        int arroba= 0;
+        boolean punto = false;
         
         for (int i = 0; i < mail.length(); i++) {
             if (mail.charAt(i)=='@'){
-                arroba=true;
+                arroba++;
+            }
+            if (mail.charAt(i)=='.'){
+                punto=true;
             }
         }
-        if(arroba==true){
+        if(arroba==1 && punto==true ){
             System.out.println("correcto");
         }
         else{
