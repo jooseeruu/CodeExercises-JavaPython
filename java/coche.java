@@ -4,9 +4,9 @@ public class coche {
     private int ancho;
     private int motor;
     private int peso;
-    String color;
-    int peso_total;
-    boolean asientos_cuero,climatizador;
+    private String color;
+    private int peso_total;
+    private boolean asientos_cuero,climatizador;
 
 
     public int dime_largo(){ //GETTERS devuelve el valor de las propiedades de los objetos
@@ -28,8 +28,8 @@ public class coche {
         return color;
     }
 
-    public void establecer_color(){ //SETTERS modifica  el valor de las propiedades de los objetos
-        color="azul";
+    public void establecer_color(String color){ //SETTERS modifica  el valor de las propiedades de los objetos
+        this.color=color;
     }
 
 
