@@ -58,21 +58,22 @@ public class coche {
         }
         return "El peso del coche es "+ peso_total+" kg";
     }
-
-    public void configura_climatizador(String climatizador){//SETTERS modifica  el valor de las propiedades de los objetos
-        if(climatizador=="si"){
-            this.climatizador=true;
-        }else{
-            this.climatizador=false;
+    public void configura_climatizador(String climatizador) { //SETTERS modifica el valor de las propiedades de los objetos
+        if (climatizador.equals("si")) {
+            this.climatizador = true;
+        } else {
+            this.climatizador = false;
         }
     }
-    public void configura_asientosCuero(String asientos_cuero){
-        if(asientos_cuero=="si"){
-            this.asientos_cuero=true;
-        }else{
-            this.asientos_cuero=false;
+    
+    public void configura_asientosCuero(String asientos_cuero) {
+        if (asientos_cuero.equals("si")) {
+            this.asientos_cuero = true;
+        } else {
+            this.asientos_cuero = false;
         }
     }
+    
     public void establecer_color(String color){ 
         this.color=color;
     }
