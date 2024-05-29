@@ -8,15 +8,13 @@ public class coche {
     private int peso_total;
     private boolean asientos_cuero,climatizador;
 
-    public String dime_datos_generales() {
-        return "Coche con " + ruedas + " ruedas, de " + largo + " cm de largo y " + ancho + " cm de ancho. " +
-                "El motor tiene una potencia de " + motor + " cc y el coche pesa " + peso_plataforma + " kg. " +
-                "El color del coche es " + color + ". " +
-                (asientos_cuero ? "Tiene asientos de cuero. " : "Tiene asientos normales. ") +
-                (climatizador ? "Tiene climatizador. " : "Tiene aire acondicionado. ") +
-                "El peso total es " + peso_total + " kg.";
+    public coche(){ //CONSTRUCTOR CLASE COCHE
+        ruedas=4;
+        largo=2000;
+        ancho=300;
+        motor=1800;
+        peso_plataforma=500;
     }
-    
     public int dime_largo(){ //GETTERS devuelve el valor de las propiedades de los objetos
         return largo;
     }
@@ -53,12 +51,12 @@ public class coche {
         int peso_carroceria = 500;
         peso_total=peso_plataforma+peso_carroceria;
         if(asientos_cuero==true){
-            peso_total=+50;
+            peso_total+=50;
         }
         if(climatizador==true){
-            peso_total=+50;
+            peso_total+=20;
         }
-        return "El peso del coche es"+ peso_total+"kg";
+        return "El peso del coche es "+ peso_total+" kg";
     }
 
     public void configura_climatizador(String climatizador){//SETTERS modifica  el valor de las propiedades de los objetos
@@ -80,11 +78,12 @@ public class coche {
     }
 
 
-    public coche(){ //CONSTRUCTOR CLASE COCHE
-        ruedas=4;
-        largo=2000;
-        ancho=300;
-        motor=1800;
-        peso_plataforma=500;
+
+
+    public String dime_datos_generales() {
+        return "Coche con " + ruedas + " ruedas, de " + largo + " cm de largo y " + ancho + " cm de ancho. " +
+                "El motor tiene una potencia de " + motor + " cc y el peso de la plataforma es " + peso_plataforma + " kg.";
     }
+    
+    
 }
