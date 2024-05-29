@@ -3,18 +3,18 @@ public class coche {
     private int largo;
     private int ancho;
     private int motor;
-    private int peso;
+    private int peso_plataforma;
     private String color;
     private int peso_total;
     private boolean asientos_cuero,climatizador;
 
     public String dime_datos_generales() {
         return "Coche con " + ruedas + " ruedas, de " + largo + " cm de largo y " + ancho + " cm de ancho. " +
-               "El motor tiene una potencia de " + motor + " cc y el coche pesa " + peso + " kg. " +
-               "El color del coche es " + color + ". " +
-               (asientos_cuero ? "Tiene asientos de cuero. " : "Tiene asientos normales. ") +
-               (climatizador ? "Tiene climatizador. " : "Tiene aire acondicionado. ") +
-               "El peso total es " + peso_total + " kg.";
+                "El motor tiene una potencia de " + motor + " cc y el coche pesa " + peso_plataforma + " kg. " +
+                "El color del coche es " + color + ". " +
+                (asientos_cuero ? "Tiene asientos de cuero. " : "Tiene asientos normales. ") +
+                (climatizador ? "Tiene climatizador. " : "Tiene aire acondicionado. ") +
+                "El peso total es " + peso_total + " kg.";
     }
     
     public int dime_largo(){ //GETTERS devuelve el valor de las propiedades de los objetos
@@ -30,7 +30,7 @@ public class coche {
         return motor;
     }
     public int dime_peso(){
-        return peso;
+        return peso_plataforma;
     }
     public String dime_color(){
         return color;
@@ -48,6 +48,17 @@ public class coche {
         }else{
             return "El coche lleva aire acondicionado";
         }
+    }
+    public String dime_peso_total(){ //setter+getter
+        int peso_carroceria = 500;
+        peso_total=peso_plataforma+peso_carroceria;
+        if(asientos_cuero==true){
+            peso_total=+50;
+        }
+        if(climatizador==true){
+            peso_total=+50;
+        }
+        return "El peso del coche es"+ peso_total+"kg";
     }
 
     public void configura_climatizador(String climatizador){//SETTERS modifica  el valor de las propiedades de los objetos
@@ -74,6 +85,6 @@ public class coche {
         largo=2000;
         ancho=300;
         motor=1800;
-        peso=500;
+        peso_plataforma=500;
     }
 }
