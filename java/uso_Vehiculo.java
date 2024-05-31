@@ -1,4 +1,4 @@
-public class uso_coche {
+public class uso_Vehiculo {
 
     public static void main(String[] args) {
 
@@ -23,6 +23,13 @@ public class uso_coche {
         // Configurar y obtener el peso total
         miCoche.dime_peso_total();
         System.out.println("El peso total del coche es: " + miCoche.dime_peso_total());
+
+        furgoneta miFurgoneta=new furgoneta(4,580);
+        miFurgoneta.establecer_color("verde");
+        miFurgoneta.configura_asientosCuero("si");
+        miFurgoneta.configura_climatizador("si");
+        System.out.println(miFurgoneta.dime_datos_generales()+miFurgoneta.getDatosFurgoneta());
+
     }
 }
 
