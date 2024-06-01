@@ -67,7 +67,7 @@ class jefatura extends empleado {
     // Método para obtener los datos del jefe, que incluyen el incentivo.
     @Override
     public String getDatosEmpleado(){
-        return super.getDatosEmpleado() + " con un incentivo de " + incentivo;
+        return super.getDatosEmpleado() + " el incentivo es de " + incentivo;
     }
 }
 

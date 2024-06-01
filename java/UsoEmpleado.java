@@ -1,22 +1,21 @@
-
 public class UsoEmpleado {
     public static void main(String[] args) {
-        // Crear un objeto Empleado
-        empleado empleado1 = new empleado("Juan", 2000, 5, 20, 3000.0);
-
-        // Aumentar el sueldo en un 5%
-        empleado1.subidaSueldo(5.0);
-
-        // Mostrar los datos del empleado
-        System.out.println(empleado1.getDatosEmpleado());
-
-        // Crear un objeto Jefatura
-        jefatura jefe1 = new jefatura("Ana", 1999, 6, 15, 5000.0);
-
-        // Establecer un incentivo para el jefe
-        jefe1.setIncentivo(1000.0);
-
-        // Mostrar los datos del jefe
-        System.out.println(jefe1.getDatosEmpleado());
+        jefatura jefe_RRHH= new jefatura("Amador", 1994, 9, 24, 50000.00);
+        jefe_RRHH.setIncentivo(3400.00);
+        empleado[] misEmpleados = new empleado[5];
+        misEmpleados[0] = new empleado("Juan", 2000, 8, 29, 43000.00);
+        misEmpleados[1] = new empleado("Ana", 2001, 9, 15, 45000.00);
+        misEmpleados[2] = new empleado("Pedro", 2002, 10, 1, 47000.00);
+        misEmpleados[3] = jefe_RRHH; //Polimorfismo, el principio de sustitución (se puede utilizar un objeto de la subclase (jefatura) siempre que el programa espere un objeto de la superclase(empleado))
+        for (empleado e: misEmpleados) {
+            if (e != null) {
+                e.subidaSueldo(5);
+            }
+        }
+        for (empleado e : misEmpleados) {
+            if (e != null) {
+                System.out.println(e.getDatosEmpleado());
+            }
+        }
     }
 }
