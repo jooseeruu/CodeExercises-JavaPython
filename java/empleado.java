@@ -71,3 +71,10 @@ class jefatura extends empleado {
     }
 }
 
+class direccion extends jefatura{
+
+    public direccion(String nombre, int año, int mes, int dia, Double sueldo) {
+        super(nombre, año, mes, dia, sueldo);
+    }
+}
+
