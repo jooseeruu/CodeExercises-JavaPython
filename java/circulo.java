@@ -12,8 +12,9 @@ public class circulo extends figura {
         double resultado= PI*Radio*Radio;
         return resultado;
     }
+    @Override
     public String get_resultados(){
-        return "resultado "+ calcular_area();
+        return "el resultado del circulo es "+ calcular_area();
     }
     
 }

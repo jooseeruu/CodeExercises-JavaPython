@@ -9,8 +9,9 @@ public class cuadrado extends figura {
         double resultado=lado*lado;
         return resultado;
     }
+    @Override
     public String get_resultados(){
-        return "resultado "+ calcular_area();
+        return "el resultado del cuadrado es "+ calcular_area();
     }
 }
 
